@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hasan Padila - Portofolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #f7f7f7;
+      color: #222;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      animation: slideFade 1s ease-out;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      animation: fadeInDown 1.2s ease-in-out;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .project {
+      margin-bottom: 2rem;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .project:hover {
+      transform: scale(1.03);
+    }
+    .project a {
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+    }
+    .project a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #111;
+      color: white;
+      font-size: 0.9rem;
+      animation: fadeIn 2s ease-in;
+    }/* Keyframes untuk animasi */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideFade {
+  from { transform: translateY(-100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  header p {
+    font-size: 0.9rem;
+  }
+  section {
+    padding: 1rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HASAN PADILA</h1>
+    <p>Masih belajar membuat website dengan semangat dan rasa ingin tahu yang tinggi. Website ini dibuat dengan bantuan AI sebagai pendamping belajar.</p>
+  </header>  <section>
+    <h2>📌 Proyek</h2>
+    <div class="project">
+      <h3>Daftar Anime</h3>
+      <p>Aplikasi daftar anime sederhana yang dibuat menggunakan teknologi web dasar.</p>
+      <a href="https://681ed23f576dd63ef1636a2b--genuine-piroshki-a2663f.netlify.app/" target="_blank">Lihat Proyek</a>
+    </div>
+    <div class="project">
+      <h3>Gerakan Stop Judi</h3>
+      <p>Kampanye digital untuk meningkatkan kesadaran akan bahaya judi online.</p>
+      <a href="https://antijudi-mizuno.netlify.app/" target="_blank">Lihat Proyek</a>
+    </div>
+  </section>  <section>
+    <h2>🛠️ Keahlian</h2>
+    <ul>
+      <li>HTML dasar</li>
+      <li>CSS untuk tata letak dan animasi</li>
+      <li>JavaScript dasar untuk interaksi sederhana</li>
+      <li>Menggunakan AI sebagai alat bantu belajar membuat website</li>
+    </ul>
+  </section>  <section>
+    <h2>🎓 Sertifikasi</h2>
+    <p>Ujian Kompetensi Keahlian (UKK) Teknik Komputer dan Jaringan, disertifikasi oleh LSP Cyber Plus. Sertifikasi ini menjadi bukti kompetensi dalam bidang jaringan komputer dan teknologi informasi.</p>
+  </section>  <section>
+    <h2>📬 Kontak</h2>
+    <p>Email: <a href="mailto:hasanpadila90@gmail.com">hasanpadila90@gmail.com</a></p>
+    <p>WhatsApp: 08388392178</p>
+    <p>GitHub: <a href="https://github.com/mizuno233356" target="_blank">github.com/mizuno233356</a></p>
+  </section>  <footer>
+    &copy; 2025 Hasan Padila.
+  </footer>  <script>
+    // Animasi scroll aktif saat elemen masuk viewport
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script></body>
+</html>
